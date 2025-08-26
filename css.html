@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS — ePortfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+        <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+        <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+        <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+        <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="py-5">
+  <div class="container">
+
+  <h2 class="mb-4">CSS — Presentation and Layout</h2>
+  <p>CSS (Cascading Style Sheets) controls the <strong>visual design and layout</strong> of web pages. While HTML is responsible for structure, CSS defines how content looks — colors, fonts, spacing, positioning, and responsiveness. Three main concepts shape CSS behavior:</p>
+  <ul>
+    <li><strong>Cascade:</strong> When multiple rules apply, the most specific or latest one takes effect.</li>
+    <li><strong>Specificity:</strong> Determines which selector has higher priority (id > class > type).</li>
+    <li><strong>Inheritance:</strong> Some properties (like font-family and color) naturally pass from parent to child elements.</li>
+  </ul>
+  <p>Modern web design uses <strong>Flexbox</strong> and <strong>CSS Grid</strong> for powerful layouts. Responsive design adapts pages to any screen size using media queries and relative units.</p>
+
+  <div class="row g-4 my-4">
+    <div class="col-lg-6">
+      <div class="card card-invert h-100">
+        <div class="card-body">
+          <h5 class="card-title">Selectors & Specificity</h5>
+<pre><code>/* Type, class, id */
+p { line-height: 1.6; }
+.note { color: #333; }
+#highlight { background: #000; color:#fff; }
+
+/* Attribute & pseudo-classes */
+input[type="email"]:focus { outline: 2px solid #000; }
+
+/* Specificity tips: prefer classes over ids for reusable styling */
+</code></pre>
+          <p class="mt-3">Selectors target elements. Type selectors apply to all elements of a kind, classes allow reusable styles, and IDs are unique. Attribute selectors and pseudo-classes (like <code>:hover</code>, <code>:focus</code>) allow more advanced styling. Good practice: use classes for most styling to keep code modular and maintainable.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card card-invert h-100">
+        <div class="card-body">
+          <h5 class="card-title">Flexbox & Grid</h5>
+<pre><code>/* Flexbox */
+.container { display:flex; gap:1rem; flex-wrap:wrap; }
+.item { flex: 1 1 240px; }
+
+/* Grid */
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+</code></pre>
+          <p class="mt-3"><strong>Flexbox</strong> is best for one-dimensional layouts (arranging items in a row or column). <strong>Grid</strong> excels at two-dimensional layouts, letting you define rows and columns explicitly. Together, they replace older, less flexible techniques like float-based layouts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Responsive Techniques</h3>
+<pre><code>@media (max-width: 768px) {
+  .sidebar { display:none; }
+  .hero { padding: 1rem; }
+}
+</code></pre>
+  <p>Media queries adjust layouts based on device width, making designs mobile-friendly. For example, sidebars can be hidden on smaller screens, while spacing can be reduced for better readability. Responsive design often uses relative units like <code>em</code>, <code>rem</code>, <code>%</code>, and <code>vh/vw</code> instead of fixed pixels.</p>
+
+  <h3>Design Choices in This Portfolio</h3>
+  <p>This site uses a minimal black-and-white theme (≈80% white background with black accents) for clarity and readability. Bootstrap utilities help with spacing, typography, and responsive breakpoints, while custom CSS refines the layout and theme. The goal is a clean, modern look that works across all devices.</p>
+
+  <div class="mt-4">
+    <a href="index.html" class="btn btn-outline-ink">Back to Home</a>
+  </div>
+
+  </div>
+</main>
+<footer class="border-top py-4 bg-white">
+  <div class="container small d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <span>© 2025 Nischal Acharya — CET138 ePortfolio</span>
+    <span>Built with HTML, CSS, Bootstrap & JavaScript.</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

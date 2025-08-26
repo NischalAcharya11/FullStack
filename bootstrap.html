@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap — ePortfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+        <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+        <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+        <li class="nav-item"><a class="nav-link active" href="bootstrap.html">Bootstrap</a></li>
+        <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="py-5">
+  <div class="container">
+
+  <h2 class="mb-4">Bootstrap — Using the Framework Effectively</h2>
+  <p>Bootstrap is one of the most popular front-end frameworks. It provides a responsive <strong>grid system</strong>, <strong>prebuilt components</strong> (like navbars, cards, modals), and <strong>utility classes</strong> for quick styling.  
+  Instead of writing everything from scratch, developers can combine Bootstrap’s building blocks with custom CSS for both speed and consistency.</p>
+
+  <h3 class="mt-4">Responsive Grid Example</h3>
+  <p>The grid system is Bootstrap’s core feature. It uses a <code>.container</code> → <code>.row</code> → <code>.col-*</code> structure, with breakpoints for mobile-first responsive design.</p>
+<pre><code>&lt;div class="container"&gt;
+  &lt;div class="row g-4"&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Column A&lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Column B&lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Column C&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  <p>Here, three columns adjust automatically:  
+    <ul>
+      <li><code>col-md-6</code> → two columns per row on medium screens.</li>
+      <li><code>col-lg-4</code> → three equal columns on large screens.</li>
+      <li><code>g-4</code> → spacing (gutter) between columns.</li>
+    </ul>
+  </p>
+
+  <h3 class="mt-4">Customized Card Component</h3>
+  <p>Bootstrap cards are versatile containers for content. Below is a card customized with a dark theme and a light button:</p>
+<pre><code>&lt;div class="card card-invert"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Black Card&lt;/h5&gt;
+    &lt;p class="card-text"&gt;White text on a black background.&lt;/p&gt;
+    &lt;a href="#" class="btn btn-light"&gt;Action&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  <p>Cards can hold images, text, buttons, or even lists. By combining Bootstrap’s base styles with a custom class (<code>.card-invert</code>), this portfolio applies a black-and-white aesthetic consistently across pages.</p>
+
+  <h3 class="mt-4">Utilities for Speed</h3>
+  <p>Bootstrap comes with hundreds of utility classes that reduce the need for custom CSS. For example:</p>
+  <ul>
+    <li><code>p-*</code> and <code>m-*</code> → padding and margin utilities (e.g., <code>p-3</code> adds uniform padding).</li>
+    <li><code>border</code>, <code>rounded</code>, <code>shadow</code> → quick borders and effects.</li>
+    <li><code>text-center</code>, <code>fw-bold</code>, <code>text-muted</code> → typography helpers.</li>
+  </ul>
+  <p>In this project, these utilities were used to make the layout responsive and visually consistent without writing large amounts of custom CSS.</p>
+
+  <h3 class="mt-4">Design Choices in This Portfolio</h3>
+  <p>Bootstrap is used <em>lightly</em> here — mainly for the responsive grid, the navbar, and card structures. The rest of the design relies on a simple black-and-white theme, achieved through custom CSS. This balance ensures the portfolio feels personal while still benefiting from Bootstrap’s efficiency.</p>
+
+  <div class="mt-4">
+    <a href="index.html" class="btn btn-outline-ink">Back to Home</a>
+  </div>
+
+  </div>
+</main>
+<footer class="border-top py-4 bg-white">
+  <div class="container small d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <span>© 2025 Nischal Acharya — CET138 ePortfolio</span>
+    <span>Built with HTML, CSS, Bootstrap & JavaScript.</span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
